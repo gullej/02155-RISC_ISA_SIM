@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args" : "branchcnt.bin"
+            "args" : "test_cases\\branchcnt.bin"
         }
     ]
 }
