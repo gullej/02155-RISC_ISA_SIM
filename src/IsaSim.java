@@ -10,6 +10,7 @@ public class IsaSim {
 
     static int reg[] = new int[31];
     static List<Integer> program = new ArrayList<>();
+    static byte memory[] = new byte[262144*4];
 
     public static void main(String[] args) {
         String inputFile = args[0];
@@ -45,13 +46,22 @@ public class IsaSim {
             rd = (instr >> 7) & 0x1f;
 
             switch (opcode) {
-                case 0b10011: // integer register immediate operations
+                case 0b0000011: // load memory instruction instruction
+                    reg[rd] = load_from_memory(instr);
+                    break;
+                case 0b0010011: // integer register immediate operations
                     reg[rd] = reg_imm_instr(instr);
                     break;
-                case 0b110011: // integer register register operations
+                case 0b0100011: // store memory instruction
+                    store_to_memory(instr);
+                    break;
+                case 0b0110011: // integer register register operations
                     reg[rd] = reg_reg_instr(instr);
                     break;
-                case 0b110111: // load insinged immediate
+                case 0b0010111: // auippc
+                    reg[rd] = ((instr >>> 12) << 12) + pc;
+                    break; 
+                case 0b0110111: // load insinged immediate
                     reg[rd] = load_unsigned_i(instr);
                     break;
                 case 0b1100011:
@@ -77,6 +87,7 @@ public class IsaSim {
 
             reg[0] = 0; // x0 is always 0
             pc += 4; // incease program counter
+            print_registers();
 
             if ((pc >> 2) >= program.size()) { // exit if at the end of program
                 print_registers();
@@ -84,6 +95,84 @@ public class IsaSim {
                 System.out.println("Program exit.");
                 System.exit(0);
             }
+        }
+    }
+
+    private static int load_from_memory(int instr) {
+        int funct3 = (instr >> 12) & 0b111;
+        int rs1 = (instr >> 15) & 0x1f;
+        int imm = (instr >> 20);
+
+        int loaded;
+        int buffer[] = new int[4];
+
+        switch(funct3) {
+            case 0b000: // load byte
+                return (memory[reg[rs1] - imm] << 24) >> 24;
+            case 0b001: // load half-word
+                for (int i = 0; i < 2; i++) {
+                    buffer[i] = memory[reg[rs1] - imm + i];
+                }
+                loaded = ((buffer[0] << 8) | buffer[1]);
+                return (loaded << 16) >> 16;
+            case 0b010: // load word
+                for (int i = 0; i < 4; i++) {
+                    buffer[i] = memory[reg[rs1] - imm + i];
+                }
+                loaded = ((buffer[3]) << 24 |
+                          (buffer[2]) << 16 |
+                          (buffer[1]) << 8 |
+                          (buffer[0]));
+                return loaded;
+            case 0b011: // load double-word
+                System.out.println("funct3 " + funct3 + " is not supported for opcode LOAD");
+                return 0;
+            case 0b100: // load byte unsigned
+                return (memory[reg[rs1] - imm] << 24) >>> 24;
+            case 0b101: // load half-word unsigned
+                for (int i = 0; i < 2; i++) {
+                    buffer[i] = memory[reg[rs1] - imm + i];
+                }
+                loaded = ((buffer[0] << 8) | buffer[1]);
+                return (loaded << 16) >>> 16;
+            // case 0b110: // load word unsigned
+            //     for (int i = 0; i < 4; i++) {
+            //         buffer[i] = memory[reg[rs1] - imm + i];
+            //     }
+            //     loaded = ((buffer[3]) << 24 |
+            //               (buffer[2]) << 16 |
+            //               (buffer[1]) << 8 |
+            //               (buffer[0]));
+            //     return loaded;
+            default:
+                System.out.println("funct3 " + funct3 + " is not supported for opcode LOAD");
+                return 0;
+        }
+    }
+
+    private static void store_to_memory(int instr) {
+        int funct3 = (instr >> 12) & 0b111;
+        int rs1 = (instr >> 15) & 0x1f;
+        int rs2 = (instr >> 20) & 0x1f;
+
+        int imm = (instr >> 7) & 0x1f |
+                  ((instr >> 25) & 0b1111111) << 5;
+
+        switch (funct3) {
+            case 0b000: // save byte
+                memory[reg[rs1] - imm] = (byte) (reg[rs2] & 0xff);
+            case 0b001: // save half-word            
+                for (int i = 0; i < 2; i++) {
+                    memory[reg[rs1] - imm + i] = (byte) ((reg[rs2] >> (i*8)) & 0xff);
+                }
+            case 0b010: // save word              
+                for (int i = 0; i < 4; i++) {
+                    memory[reg[rs1] - imm + i] = (byte) ((reg[rs2] >> (i*8)) & 0xff);
+                }
+            case 0b011: // save double-word  
+                System.out.println("funct3 " + funct3 + " is not supported for opcode LOAD");
+            default:
+                System.out.println("funct3 " + funct3 + " is not supported for opcode LOAD");
         }
     }
 
@@ -107,7 +196,6 @@ public class IsaSim {
                     outputStream.writeByte(buffer[i]);
                 }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -137,8 +225,6 @@ public class IsaSim {
             System.out.print(i + " ");
         }
         System.out.println();
-
-
     }
 
     private static int reg_imm_instr(int instr) {
