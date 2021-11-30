@@ -12,11 +12,235 @@
         },
         {
             "type": "java",
-            "name": "Launch IsaSim",
+            "name": "addlarge",
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args" : "test_cases\\branchcnt.bin"
+            "args": "task1\\addlarge"
+        },
+        {
+            "type": "java",
+            "name": "addneg",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task1\\addneg"
+        },
+        {
+            "type": "java",
+            "name": "addpos",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task1\\addpos"
+        },
+        {
+            "type": "java",
+            "name": "bool",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task1\\bool"
+        },
+        {
+            "type": "java",
+            "name": "set",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task1\\set"
+        },
+        {
+            "type": "java",
+            "name": "shift",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task1\\shift"
+        },
+        {
+            "type": "java",
+            "name": "shift2",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task1\\shift2"
+        },
+        {
+            "type": "java",
+            "name": "branchcnt",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task2\\branchcnt"
+        },
+        {
+            "type": "java",
+            "name": "branchmany",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task2\\branchmany"
+        },
+        {
+            "type": "java",
+            "name": "branchtrap",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task2\\branchtrap"
+        },
+        {
+            "type": "java",
+            "name": "loop",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task3\\loop"
+        },
+        {
+            "type": "java",
+            "name": "recursive",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task3\\recursive"
+        },
+        {
+            "type": "java",
+            "name": "string",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task3\\string"
+        },
+        {
+            "type": "java",
+            "name": "width",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task3\\width"
+        },
+        {
+            "type": "java",
+            "name": "t1",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t1"
+        },
+        {
+            "type": "java",
+            "name": "t2",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t2"
+        },
+        {
+            "type": "java",
+            "name": "t3",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t3"
+        },
+        {
+            "type": "java",
+            "name": "t4",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t4"
+        },
+        {
+            "type": "java",
+            "name": "t5",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t5"
+        },
+        {
+            "type": "java",
+            "name": "t6",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t6"
+        },
+        {
+            "type": "java",
+            "name": "t7",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t7"
+        },
+        {
+            "type": "java",
+            "name": "t8",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t8"
+        },
+        {
+            "type": "java",
+            "name": "t9",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t9"
+        },
+        {
+            "type": "java",
+            "name": "t10",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t10"
+        },
+        {
+            "type": "java",
+            "name": "t11",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t11"
+        },
+        {
+            "type": "java",
+            "name": "t12",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t12"
+        },
+        {
+            "type": "java",
+            "name": "t13",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t13"
+        },
+        {
+            "type": "java",
+            "name": "t14",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t14"
+        },
+        {
+            "type": "java",
+            "name": "t15",
+            "request": "launch",
+            "mainClass": "IsaSim",
+            "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
+            "args": "task4\\t15"
         }
     ]
 }

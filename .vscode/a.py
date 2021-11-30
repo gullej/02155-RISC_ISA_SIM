@@ -1,0 +1,2 @@
+for i in range(1,16):
+    print('\n{\n"type": "java",\n"name": "t' + str(i) + '",\n"request": "launch",\n"mainClass": "IsaSim",\n"projectName": "RISC-V_ISA_SIM_dbc4fb8a",\n"args" : "task4\\t' + str(i) + '"\n},')
