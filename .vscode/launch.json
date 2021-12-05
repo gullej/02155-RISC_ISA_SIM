@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task1\\addlarge"
+            "args": "tests\\task1\\addlarge.bin"
         },
         {
             "type": "java",
@@ -24,7 +24,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task1\\addneg"
+            "args": "tests\\task1\\addneg.bin"
         },
         {
             "type": "java",
@@ -32,7 +32,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task1\\addpos"
+            "args": "tests\\task1\\addpos.bin"
         },
         {
             "type": "java",
@@ -40,7 +40,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task1\\bool"
+            "args": "tests\\task1\\bool.bin"
         },
         {
             "type": "java",
@@ -48,7 +48,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task1\\set"
+            "args": "tests\\task1\\set.bin"
         },
         {
             "type": "java",
@@ -56,7 +56,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task1\\shift"
+            "args": "tests\\task1\\shift.bin"
         },
         {
             "type": "java",
@@ -64,7 +64,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task1\\shift2"
+            "args": "tests\\task1\\shift2.bin"
         },
         {
             "type": "java",
@@ -72,7 +72,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task2\\branchcnt"
+            "args": "tests\\task2\\branchcnt.bin"
         },
         {
             "type": "java",
@@ -80,7 +80,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task2\\branchmany"
+            "args": "tests\\task2\\branchmany.bin"
         },
         {
             "type": "java",
@@ -88,7 +88,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task2\\branchtrap"
+            "args": "tests\\task2\\branchtrap.bin"
         },
         {
             "type": "java",
@@ -96,7 +96,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task3\\loop"
+            "args": "tests\\task3\\loop.bin"
         },
         {
             "type": "java",
@@ -104,7 +104,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task3\\recursive"
+            "args": "tests\\task3\\recursive.bin"
         },
         {
             "type": "java",
@@ -112,7 +112,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task3\\string"
+            "args": "tests\\task3\\string.bin"
         },
         {
             "type": "java",
@@ -120,7 +120,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task3\\width"
+            "args": "tests\\task3\\width.bin"
         },
         {
             "type": "java",
@@ -128,7 +128,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t1"
+            "args": "tests\\task4\\t1.bin"
         },
         {
             "type": "java",
@@ -136,7 +136,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t2"
+            "args": "tests\\task4\\t2.bin"
         },
         {
             "type": "java",
@@ -144,7 +144,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t3"
+            "args": "tests\\task4\\t3.bin"
         },
         {
             "type": "java",
@@ -152,7 +152,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t4"
+            "args": "tests\\task4\\t4.bin"
         },
         {
             "type": "java",
@@ -160,7 +160,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t5"
+            "args": "tests\\task4\\t5.bin"
         },
         {
             "type": "java",
@@ -168,7 +168,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t6"
+            "args": "tests\\task4\\t6.bin"
         },
         {
             "type": "java",
@@ -176,7 +176,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t7"
+            "args": "tests\\task4\\t7.bin"
         },
         {
             "type": "java",
@@ -184,7 +184,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t8"
+            "args": "tests\\task4\\t8.bin"
         },
         {
             "type": "java",
@@ -192,7 +192,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t9"
+            "args": "tests\\task4\\t9.bin"
         },
         {
             "type": "java",
@@ -200,7 +200,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t10"
+            "args": "tests\\task4\\t10.bin"
         },
         {
             "type": "java",
@@ -208,7 +208,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t11"
+            "args": "tests\\task4\\t11.bin"
         },
         {
             "type": "java",
@@ -216,7 +216,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t12"
+            "args": "tests\\task4\\t12.bin"
         },
         {
             "type": "java",
@@ -224,7 +224,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t13"
+            "args": "tests\\task4\\t13.bin"
         },
         {
             "type": "java",
@@ -232,7 +232,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t14"
+            "args": "tests\\task4\\t14.bin"
         },
         {
             "type": "java",
@@ -240,7 +240,7 @@
             "request": "launch",
             "mainClass": "IsaSim",
             "projectName": "RISC-V_ISA_SIM_dbc4fb8a",
-            "args": "task4\\t15"
+            "args": "tests\\task4\\t15.bin"
         }
     ]
 }
